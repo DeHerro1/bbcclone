@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Inputs.css';
 import GenerateImage from '../GenerateImage';
+import axios from 'axios';
+import { v4 as uuidv4} from 'uuid';
 
 const Inputs = () => {
     const [image, setImage] = useState("");
@@ -33,6 +35,11 @@ const Inputs = () => {
         e.preventDefault();
 
         const imageData = {
+            "id": Math.random() * 399,
+            "category": {
+                "id": Math.random() * 500,
+                'name': name
+            },
             'title': name,
             'price': price,
             'description': text,
@@ -40,15 +47,12 @@ const Inputs = () => {
 
         }
 
-        const data = {
-            method: "POST",
-            mode: 'no-cors',
-            Headers: {'Content-Type': 'application/json'},
-            body:JSON.stringify(imageData)
-        };
-        fetch('http://test.anchoratechs.com/categories', data)
-   .then(res => console.log(res.message, 'succeeful'))
-   .catch(err => console.log(err, 'unsuccessful'))
+        axios({
+            method: 'post',
+            url: 'http://test.anchoratechs.com/items',
+            data: imageData
+        }).then(res => console.log(res, 'succeeful'))
+          .catch(err => console.log(err, 'unsuccessful'))
     }
 
     return (
