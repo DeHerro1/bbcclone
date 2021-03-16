@@ -1,0 +1,5 @@
+.images {
+    display: grid;
+    grid-template-rows: minmax(200, 40%);
+    grid-template-columns: repeat(1fr, 2);
+}
