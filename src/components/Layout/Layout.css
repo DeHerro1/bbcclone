@@ -1,3 +1,21 @@
 .Layout {
     padding: 0 20px;
 }
+
+.links {
+    margin-top: 20px;
+}
+
+.product_link, .item_link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.product_link:active,
+.product_link:hover,
+.item_link:active,
+.item_link:hover {
+    color: cornflowerblue;
+    text-decoration: underline;
+}

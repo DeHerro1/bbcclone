@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import './Inputs.css';
+import './Items.css';
 import GenerateImage from '../GenerateImage';
-import axios from 'axios';
-import { v4 as uuidv4} from 'uuid';
+import axios from '../../axios';
+import Item from './Item/Item';
 
-const Inputs = () => {
+const Items = () => {
     const [image, setImage] = useState("");
     const [text, setText] = useState("");
-    const [name, setName] = useState("");
+    const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
 
     const handleText = (e) => {
@@ -23,39 +23,41 @@ const Inputs = () => {
 
     const handleAmount = (e) => {
         let value = parseFloat(e.target.value);
+        console.log(typeof(value));
         setPrice(value);
     }
 
     const handleName = (e) => {
         let value = e.target.value;
-        setName(value);
+        setTitle(value);
     }
 
     const sendData = (e) => {
         e.preventDefault();
 
         const imageData = {
-            "id": Math.random() * 399,
+            "id": Math.random() * 500,
             "category": {
-                "id": Math.random() * 500,
-                'name': name
+                "id": Math.random() * 300,
+                "name": title
             },
-            'title': name,
-            'price': price,
-            'description': text,
-            'image': image
+            "title": title,
+            "price": price,
+            "description": text,
+            "image": image
 
         }
 
         axios({
             method: 'post',
-            url: 'http://test.anchoratechs.com/items',
+            url: "items",
             data: imageData
         }).then(res => console.log(res, 'succeeful'))
           .catch(err => console.log(err, 'unsuccessful'))
     }
 
     return (
+    <div>    
         <form className="inputs_form" >
             <h3>Get a product image, it's price, description and name.</h3>
             <div className="image_input">
@@ -65,12 +67,12 @@ const Inputs = () => {
 
             <div className="image_text">
                 <label>Enter product price:</label>
-                <input type="text" onChange={handleAmount} />
+                <input type="number" onChange={handleAmount} />
             </div>
 
             <div className="image_text">
                 <label>Name of product:</label>
-                <textarea type="text" onChange={handleName} />
+                <input type="text" onChange={handleName} />
             </div>
             
             <div className="image_text">
@@ -80,7 +82,11 @@ const Inputs = () => {
             
             <button onClick={sendData} className="image_submit_button">Submit</button>
         </form>
+        <div>
+            <Item />
+        </div>
+    </div>
     )
 }
 
-export default Inputs;
+export default Items;

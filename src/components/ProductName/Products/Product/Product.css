@@ -1,0 +1,30 @@
+.product {
+    border-radius: 10px;
+    width: 40%;
+    height: fit-content;
+    box-shadow: 5px 5px 10px rgba(190, 190, 190, 0.3),
+                -5px -5px 10px rgba(206, 206, 206, 0.3);
+    margin: 10px;
+    padding: 10px;
+}
+
+.product > p {
+    margin: 10px 0;
+}
+
+.edit_name {
+    background: rgb(201, 199, 199);
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.delete_name {
+    background: red;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    padding: 10px;
+    
+}
