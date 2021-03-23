@@ -1,14 +1,20 @@
+import React, { useState } from 'react';
 import './App.css';
-import Layout from './components/Layout/Layout';
+import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter } from 'react-router-dom';
+import NewsContent from './components/NewsContents/NewsContents';
 
 function App() {
+  const [show, setShow] = useState(false);
+
+  const handleDropDown = () => {
+    setShow(prev => !prev);
+}
+
   return (
     <BrowserRouter>
-      <div className="App">
-        <h1 className="App_header">Product App</h1>
-        <Layout />
-      </div>
+     <NavBar show={show} handleDropDown={handleDropDown} />
+     <NewsContent show={show} handleDropDown={handleDropDown} />
     </BrowserRouter>
   );
 }

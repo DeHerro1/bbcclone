@@ -1,0 +1,264 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    color: white;
+    background: black;
+    height: 40px;
+    padding: 0 5px;
+    text-align: center;
+    
+    overflow: hidden;
+}
+
+ .navbar_to {
+    background: white;
+    color: black;
+    transition: all ease-in-out 0.3s;
+}
+
+.bbc_home_icon {
+    display: flex;
+    font-size: 1.4em;
+    font-weight: 600;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+.bbc_home_icon > div {
+    margin-right: 5px;
+    margin-bottom: 3px;
+    width: 20px;
+    color: black;
+    height: 30px;
+    background-color: white;
+}
+
+.bbc_account {
+    display: none;
+}
+
+.reel_link,
+.sounds_link,
+.travel_link,
+.sport_link,
+.dropdown,
+.search,
+.future_link,
+.weather_link {
+    display: none;
+}
+
+.reel_link,
+.sounds_link,
+.travel_link,
+.news_link,
+.future_link,
+.profile_link,
+.dropdown,
+.weather_link {
+    padding: 10px 10px 0 10px;
+
+}
+
+.news_link{
+    border-left: 1px solid rgb(177, 177, 177);
+    cursor: pointer;
+    height: 30px;
+}
+
+.change {
+    color: black;
+}
+
+.profile_link {
+    border-left: 1px solid rgb(177, 177, 177);
+    width: 8%;
+    padding: 0 5px;
+}
+
+.dropdown {
+    display: flex;
+    cursor: pointer;
+    height: 30px;
+    border-left: 1px solid rgb(177, 177, 177);
+    width: 20%;
+}
+
+.dropdown > span {
+    padding-right: 10px;
+}
+
+.profile_link:hover,
+.profile_link:active {
+    border-bottom: 3px solid rgb(86, 86, 243);
+}
+
+.news_link:hover,
+.news_link:active {
+    border-bottom: 3px solid rgb(241, 55, 55);
+}
+
+.sport_link:hover,
+.sport_link:active {
+    border-bottom: 3px solid yellow;
+}
+
+.dropdown:hover,
+.dropdown:active {
+    border-bottom: 3px solid white;
+}
+
+.search_button {
+    font-size: 30px !important;
+    height:25px !important;
+    margin-left: -1px !important;
+    cursor: pointer;
+}
+
+.search_form {
+    border-left: 1px solid rgb(177, 177, 177);
+    border-right: 1px solid rgb(177, 177, 177);
+    margin-top: 10px;
+    height: 30px;
+    display: flex;
+    width: 10%;
+}
+
+.dropdown_items {
+    position: absolute;
+    top: 50px;
+    display: grid;
+    padding-left: 20px;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    color: black;
+    animation: drop 0.5s ease-in-out;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(70, 69, 69, 0.2);
+}
+
+.dropdown_items > p,
+.dropdown_items > p,
+.dropdown_items > p {
+    padding-top: 10px;
+}
+
+@keyframes drop {
+    from {
+        top: 40px;
+        opacity: 0;
+    }
+    to {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 400px) {
+    .weather_link {
+        display: block;
+        border-left: 1px solid rgb(177, 177, 177);
+        cursor: pointer;
+        height: 30px;
+    }
+
+    .weather_link:hover,
+    .weather_link:active {
+    border-bottom: 3px solid rgb(87, 181, 235);
+}
+
+.weather_item {
+    display: none;
+}
+
+.dropdown_items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (min-width: 700px) {
+    .reel_link,
+    .travel_link
+     {
+        display: block;
+        border-left: 1px solid rgb(177, 177, 177);
+        cursor: pointer;
+        height: 30px;
+    }
+
+    .reel_link:hover,
+    .reel_link:active {
+        border-bottom: 3px solid rgb(243, 98, 123);
+}
+
+.reel_item,
+.travel_item {
+    display: none;
+}
+
+    .search_form {
+        width: fit-content;
+        padding: 0 10px 5px 10px;
+    }
+
+    .search_section {
+        display: flex;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .search_button {
+        color: black;
+    }
+
+    .search {
+        height: 20px;
+        background: none;
+        border: none;
+        display: block;
+        border-left: 1px solid rgb(177, 177, 177);
+    }
+
+.travel_link:hover,
+.travel_link:active {
+    border-bottom: 3px solid rgb(6, 245, 6);
+}
+
+    .search::placeholder {
+        color: black;
+    }
+
+    .dropdown {
+        width: 10%;
+    }
+
+    .profile_link {
+        width: 5%;
+    }
+}
+
+@media (min-width: 900px) {
+    .sounds_link,
+    .future_link {
+        display: block;
+        border-left: 1px solid rgb(177, 177, 177);
+        cursor: pointer;
+        height: 30px;
+    }
+
+    .dropdown_items {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .sounds_item,
+    .future_item {
+        display: none;
+    }
+}
