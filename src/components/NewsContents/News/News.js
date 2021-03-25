@@ -2,15 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './News.css';
 
-const News = ({text, url, link, img}) => {
+const News = ({text, url, link, img, content}) => {
+  
+  
+
     return (
         <div className="news" >
           <Link to={url}>
           <img 
             src={img}
-            alt='line'
+            alt={link}
             className="image" />
-            <h3 className="text">{text}</h3>
+            <div className="text">
+              <h4>{text}</h4>
+              <p> {content} </p>
+            </div>
+            
           </Link>  
         </div>
     )

@@ -19,10 +19,12 @@ const NavBar = ({ show, handleDropDown }) => {
                 </div>
            </Link> 
            
-            <div className="profile_link">
-                <AccountCircle className="bbc_account_icon"/>
-                <span className="bbc_account">BBC Account</span>
-            </div>
+            <Link to="/signup">
+                <div className="profile_link">
+                    <AccountCircle className="bbc_account_icon"/>
+                    <span className="bbc_account">BBC Account</span>
+                </div>
+            </Link>
             <Link to="/news">
                 <div className={ ` news_link ${show ? 'change' : 'news_link'}`}>News</div>
             </Link>

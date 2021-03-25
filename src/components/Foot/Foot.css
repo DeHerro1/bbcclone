@@ -1,0 +1,68 @@
+.foot {
+    color: black;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.6);
+    text-align: center;
+}
+
+.foot > h2 {
+    text-align: start;
+    padding: 10px 0;
+}
+
+.bottom_links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+}
+
+.weather,
+.sport,
+.newss,
+.sounds,
+.future,
+.reel,
+.travel {
+    color: black;
+    padding-bottom: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.conditions {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.terms {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 10px;
+}
+
+.terms > p {
+    padding-bottom: 10px;
+}
+
+@media (min-width: 700px) {
+    .bottom_links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .terms {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .bottom_links {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .terms {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
