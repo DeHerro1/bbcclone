@@ -2,12 +2,10 @@ import React from 'react';
 import './HeadLine.css';
 
 const HeadLine = ({text, url, link, img, content}) => {
-  
-  let path = url;
 
     return (
         <div className="head_line">
-          <a href={path}>
+          <a href={url}>
           <img 
             src={img}
             alt={link}

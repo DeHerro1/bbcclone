@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './NewsContents.css';
+import '../NewsContents/Content/Content.css';
 import News from './News/News';
 import nike from '../../assets/set.png';
 import HeadLine from './HeadLine/HeadLine';
@@ -55,15 +56,18 @@ const NewsContent = ({show}) => {
                 <p>Welcome to BBC.com</p>
                 <p className="date">Saturday, 13 March</p>
             </header>
+            
+            <section className="heading_section">
             {
                 <HeadLine
                     img={head.urlToImage}
                     text={head.title}
                     content={head.description}
+                    url={head.url}
                     />
                 }
-            <section className="headings">
-                {
+                <div className="headings">
+                    {
                     headLines.map((headline, index) => {
                         return (
                             <News
@@ -74,6 +78,8 @@ const NewsContent = ({show}) => {
                         )
                     })
                 }
+           
+                </div>
             </section>
             <section >
                 <h3 className="news_page">News</h3>
@@ -82,10 +88,13 @@ const NewsContent = ({show}) => {
                     news.map((net, index) => {
                         return (
                             <Content
-                            key={index}
-                    img={net.urlToImage}
-                    url={net.url}
-                    text={net.title} />
+                                key={index}
+                                contentImg='content_img'
+                                content='content'
+                                contentText='content_text'
+                                img={net.urlToImage}
+                                url={net.url}
+                                text={net.title} />
                         )
                     })
                 
@@ -99,10 +108,13 @@ const NewsContent = ({show}) => {
                     sport.map((net, index) => {
                         return (
                             <Content
-                            key={index}
-                    img={net.urlToImage}
-                    url={net.url}
-                    text={net.title} />
+                                key={index}
+                                contentImg='content_img'
+                                content='content'
+                                contentText='content_text'
+                                img={net.urlToImage}
+                                url={net.url}
+                                text={net.title} />
                         )
                     })
                 
@@ -116,10 +128,13 @@ const NewsContent = ({show}) => {
                     reel.map((net, index) => {
                         return (
                             <Content
-                            key={index}
-                    img={net.urlToImage}
-                    url={net.url}
-                    text={net.title} />
+                                key={index}
+                                contentImg='content_img2'
+                                content='content'
+                                contentText='content_text'
+                                img={net.urlToImage}
+                                url={net.url}
+                                text={net.title} />
                         )
                     })
                 
@@ -140,10 +155,13 @@ const NewsContent = ({show}) => {
                     more.map((net, index) => {
                         return (
                             <Content
-                            key={index}
-                    img={net.urlToImage}
-                    url={net.url}
-                    text={net.title} />
+                                key={index}
+                                contentImg='content_img'
+                                content='content'
+                                contentText='content_text'
+                                img={net.urlToImage}
+                                url={net.url}
+                                text={net.title} />
                         )
                     })
                 
@@ -157,10 +175,13 @@ const NewsContent = ({show}) => {
                     future.map((net, index) => {
                         return (
                             <Content
-                            key={index}
-                    img={net.urlToImage}
-                    url={net.url}
-                    text={net.title} />
+                                key={index}
+                                contentImg='content_img2'
+                                content='content'
+                                contentText='content_text'
+                                img={net.urlToImage}
+                                url={net.url}
+                                text={net.title} />
                         )
                     })
                 
@@ -181,10 +202,13 @@ const NewsContent = ({show}) => {
                     editor.map((net, index) => {
                         return (
                             <Content
-                            key={index}
-                    img={net.urlToImage}
-                    url={net.url}
-                    text={net.title} />
+                                key={index}
+                                contentImg='content_img2'
+                                content='content'
+                                contentText='content_text'
+                                img={net.urlToImage}
+                                url={net.url}
+                                text={net.title} />
                         )
                     })
                 
@@ -205,10 +229,13 @@ const NewsContent = ({show}) => {
                     entertainment.map((net, index) => {
                         return (
                             <Content
-                            key={index}
-                    img={net.urlToImage}
-                    url={net.url}
-                    text={net.title} />
+                                key={index}
+                                contentImg='content_img'
+                                content='content'
+                                contentText='content_text'
+                                img={net.urlToImage}
+                                url={net.url}
+                                text={net.title} />
                         )
                     })
                 

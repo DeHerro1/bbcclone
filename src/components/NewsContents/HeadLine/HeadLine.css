@@ -1,14 +1,14 @@
 .head_line {
     padding: 15px 10px;
     border-bottom: 1px solid rgba(53, 52, 52, 0.5);
-    height: 200px;
+    height: 250px;
 }
 
 .head_line_image {
         width: 100%;
-        height: 100%;
+        height: 200px;
         z-index: 1;
-    }
+}
 
 .head_line_text {
     color: white;
@@ -29,11 +29,44 @@
     filter: brightness(110%);
 }
 
+@media (min-width: 400px) {
+
+    .head_line_image {
+        height: 220px;
+}
+
+    .head_line_text {
+        font-size: 1.2rem;
+        bottom: 100px;
+    }
+}
+
 @media (min-width: 700px) {
     .head_line {
-        height: 400px;
+        height: 340px;
     }
+
+    .head_line_image {
+        height: 300px;
+}
+
     .head_line_text {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 870px) {
+    
+    .head_line {
+        height: 500px;
+    }
+
+    .head_line_image {
+        height: 450px;
+    }
+
+    .head_line_text {
+        font-size: 1.8rem;
+        bottom: 140px;
     }
 }

@@ -1,7 +1,12 @@
 .content {
     margin-bottom: 10px;
     background-color: white;
-    margin: 10px;
+}
+
+.content_img2 {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
 }
 
 .content_img {
@@ -22,6 +27,7 @@
         display: block;
         width: 100%;
         height: 300px;
+        padding: 10px;
     }
     .content_text {
         font-size: 1.2rem;

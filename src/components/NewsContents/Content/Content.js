@@ -1,18 +1,17 @@
 import React from 'react';
 import './Content.css';
-import { Link } from 'react-router-dom';
 
-const Content = ({ img, text, url}) => {
+const Content = ({contentClass, contentImg, contentText, img, text, url}) => {
 
     return (
-        <div className="content">
-            <Link to={url}>
+        <div className={contentClass}>
+            <a href={url}>
                 <img
-                    className="content_img"
+                    className={contentImg}
                     src={img}
                     alt={url} />
-                <h3 className="content_text"> {text} </h3>
-            </Link>
+                <h3 className={contentText}> {text} </h3>
+            </a>
             
         </div>
     )

@@ -28,7 +28,9 @@
 }
 
 .future_page {
-    border-left: 4px solid orangered;
+    border: 2px solid green;
+    width: 180px;
+    color: white;
 }
 
 .travel_page {
@@ -43,6 +45,10 @@
     margin: 20px 0 20px 10px;
     font-size: 1.4rem;
     padding-left: 10px;
+}
+
+.reel_section {
+    background-image: linear-gradient(to bottom, rgb(58, 58, 58), rgba(128, 128, 128, 0.281));
 }
 
 .change_set {
@@ -107,10 +113,6 @@
     .news_header {
         display: flex;
         justify-content: space-between;
-    }
-
-    .reel_section {
-        background-image: linear-gradient(to bottom, rgb(58, 58, 58), rgba(128, 128, 128, 0.281));
     }
 
     .news_header {

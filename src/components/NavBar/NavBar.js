@@ -48,7 +48,7 @@ const NavBar = ({ show, handleDropDown }) => {
             </Link>
             <div onClick={handleDropDown} className="dropdown">
                 <span>More</span>
-                <ArrowDropDown />
+                <ArrowDropDown className="dropdown_icon" />
             </div>
             <form className="search_form" >
             <div className="search_section">

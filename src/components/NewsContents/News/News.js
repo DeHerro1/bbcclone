@@ -1,14 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './News.css';
 
 const News = ({text, url, link, img, content}) => {
-  
-  
 
     return (
         <div className="news" >
-          <Link to={url}>
+          <a href={url}>
           <img 
             src={img}
             alt={link}
@@ -18,7 +15,7 @@ const News = ({text, url, link, img, content}) => {
               <p> {content} </p>
             </div>
             
-          </Link>  
+          </a>  
         </div>
     )
 }
